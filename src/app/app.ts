@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ContentCategoryCarousel } from './components/content-category.carousel/content.category.carousel';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ContentCategoryCarousel],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
