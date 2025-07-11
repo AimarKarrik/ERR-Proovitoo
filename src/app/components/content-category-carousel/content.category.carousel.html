@@ -1,0 +1,7 @@
+<div class="content-category-carousel">
+  <h1>{{ categoryData().header }}</h1>
+  <div class="item-container">
+    @for (categoryItem of categoryData().data; track $index)
+    {<content-card-vertical [cardData]="categoryItem" />}
+  </div>
+</div>

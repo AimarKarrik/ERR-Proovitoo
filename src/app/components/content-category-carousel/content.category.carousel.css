@@ -1,0 +1,10 @@
+.content-category-carousel {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-category-carousel .item-container {
+  display: flex;
+  overflow-x: scroll;
+  gap: 2rem;
+}

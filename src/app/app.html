@@ -1,6 +1,6 @@
-<style></style>
-
 <main class="main">
-  <content-category-carousel data />
-  <router-outlet />
+  @if (categories()) { @for (category of categories(); track $index) { @if
+  (category.highTimeline) {<content-category-carousel
+    [categoryData]="category"
+  />} } }
 </main>

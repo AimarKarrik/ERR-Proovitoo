@@ -1,0 +1,15 @@
+.card-item {
+  display: flex;
+  flex-direction: column;
+  height: 24rem;
+  width: auto;
+}
+
+.card-item img {
+  height: 100%;
+  width: auto;
+}
+
+.card-item:hover img {
+  height: 105%;
+}

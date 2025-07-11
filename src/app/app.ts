@@ -1,29 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ContentCategoryCarousel } from './components/content-category.carousel/content.category.carousel';
-import { HttpClient } from '@angular/common/http';
+import { Component, Injectable, OnInit, signal } from '@angular/core';
+import { ContentCategoryCarousel } from './components/content-category-carousel/content.category.carousel';
+import { ApiService } from './services/api.service';
 
+
+@Injectable({
+  providedIn: 'root'
+})
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ContentCategoryCarousel],
+  imports: [ContentCategoryCarousel],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App implements OnInit {
-  public data: any;
-  constructor(private http: HttpClient) {
+  categories = signal<any>({});
 
-  }
-  ngOnInit(): void {
-    this.getData()
-  }
-  public getData() {
-    const url: string = "https://services.err.ee/api/v2/category/getByUrl?url=video&domain=jupiter.err.ee";
-    this.http.get(url).subscribe(
-      (resp: any) => {
-        this.data = resp.data.category.frontpage
-      }
-    )
+  constructor(private apiService: ApiService) { }
+
+  ngOnInit() {
+    this.apiService.getData().subscribe(data => {
+      this.categories.set(data.data.category.frontPage);
+    });
   }
 }
 
