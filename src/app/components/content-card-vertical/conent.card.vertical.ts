@@ -2,9 +2,9 @@ import { Component, input } from "@angular/core";
 
 @Component({
     selector: 'content-card-vertical',
-    template: `<p>{{testText()}}</p>`
+    template: `<p>{{title()}}</p>`
 })
 
 export class ContentCardVertical {
-    testText = input<string>("placeholder")
+    title = input<string>("content-card-vertical_placeholder")
 }

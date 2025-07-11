@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, input } from "@angular/core";
 import { ContentCardVertical } from "../content-card-vertical/conent.card.vertical";
 
 
@@ -7,23 +7,24 @@ import { ContentCardVertical } from "../content-card-vertical/conent.card.vertic
     imports: [ContentCardVertical],
     styles: '',
     template: `
-    <p>CategoryScroller</p>
-    @for (testItem of testData; track $index) {
-        <content-card-vertical [testText]="testItem.testText"/>
-    }
+    <h1>{{categoryData()}}</h1>
+    @for (item of content; track $index) {<content-card-vertical  [title]="item.title"/>}
+    
+
     `
 })
 
 export class ContentCategoryCarousel {
-    testData = [
+    categoryData: any = input<any>(null)
+    content = [
         {
-            testText: "test1"
+            title: "test1"
         },
         {
-            testText: "test2"
+            title: "test2"
         },
         {
-            testText: "test3"
-        }
+            title: "test3"
+        },
     ]
 }
