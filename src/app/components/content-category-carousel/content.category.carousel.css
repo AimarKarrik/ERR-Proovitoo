@@ -3,8 +3,25 @@
   flex-direction: column;
 }
 
-.content-category-carousel .item-container {
+.content-category-carousel .list {
   display: flex;
   overflow-x: scroll;
-  gap: 2rem;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.content-category-carousel .list::-webkit-scrollbar {
+  display: none;
+}
+
+.content-category-carousel .carousel-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.content-category-carousel .carousel-button {
+  height: 80%;
+  width: auto;
 }
