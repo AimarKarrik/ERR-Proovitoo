@@ -1,12 +1,11 @@
 import { Component, input } from "@angular/core";
 import { ContentCardVertical } from "../content-card-vertical/conent.card.vertical";
 import { Scrollable } from "./scrollable.directive";
-import { NgIf } from "@angular/common";
 
 
 @Component({
     selector: 'content-category-carousel',
-    imports: [ContentCardVertical, Scrollable, NgIf],
+    imports: [ContentCardVertical, Scrollable],
     styleUrl: './content.category.carousel.css',
     templateUrl: './content.category.carousel.html',
 })

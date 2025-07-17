@@ -1,10 +1,14 @@
 .card-item {
   display: flex;
   flex-direction: column;
-  height: 24rem;
+  height: 23rem;
   width: auto;
 
   padding: 1rem;
+}
+
+.card-item:hover {
+  cursor: pointer;
 }
 
 .card-item img {

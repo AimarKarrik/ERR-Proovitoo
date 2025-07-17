@@ -8,4 +8,8 @@ import { Component, input } from "@angular/core";
 
 export class ContentCardVertical {
     cardData = input<any>()
+
+    redirectToExternal() {
+        window.location.href = this.cardData().canonicalUrl;
+    }
 }

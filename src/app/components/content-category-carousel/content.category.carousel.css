@@ -3,8 +3,17 @@
   flex-direction: column;
 }
 
+.content-category-carousel h1 {
+  margin-left: 3rem;
+}
+
 .content-category-carousel .list {
   display: flex;
+
+  height: fit-content;
+  width: auto;
+  border-radius: 5px;
+
   overflow-x: scroll;
   scroll-behavior: smooth;
   -ms-overflow-style: none; /* IE and Edge */
@@ -19,9 +28,35 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: fit-content;
+  width: 100%;
 }
 
-.content-category-carousel .carousel-button {
-  height: 80%;
+.content-category-carousel .scroller-button {
+  height: 23rem;
   width: auto;
+  padding: 0.5rem;
+
+  background: none;
+  border: none;
+
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #e6e9ef;
+}
+
+.content-category-carousel .scroller-button#button-left {
+  border-radius: 0 5px 5px 0;
+}
+
+.content-category-carousel .scroller-button#button-right {
+  border-radius: 5px 0 0 5px;
+}
+
+.content-category-carousel .scroller-button:hover {
+  background-color: #4c6895;
+}
+
+.content-category-carousel .scroller-button:active {
+  background-color: #455e87;
 }
