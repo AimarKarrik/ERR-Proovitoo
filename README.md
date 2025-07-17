@@ -7,7 +7,7 @@ This project was made for ERR job interview.
 To install packages, run:
 
 ```bash
-ng serve
+npm i
 ```
 
 ## Development server
